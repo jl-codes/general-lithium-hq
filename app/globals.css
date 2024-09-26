@@ -2,26 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Color scheme */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ededed;
+  --highlight: #ffffff;
+  --secondary-highlight: #eb82ea;
+  --accent: #00ffcc;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Dark theme */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Geist VF', Arial, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Remove glow effect */
+.glow-effect {
+  text-shadow: none;
+  color: var(--foreground);
+}
+
+/* Titles */
+h1, h2 {
+  color: var(--foreground);
+}
+
+/* Coin-shaped buttons */
+.coin-button {
+  background-color: var(--accent);
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin-button:hover {
+  background-color: var(--secondary-highlight);
+  transform: scale(1.1);
+}
+
+/* Form input fields */
+.input-field {
+  background-color: #222;
+  color: var(--foreground);
+  border: 1px solid var(--accent);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--secondary-highlight);
+}
+
+/* Footer styles */
+footer {
+  background-color: #111;
+  color: var(--foreground);
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: var(--accent);
 }
