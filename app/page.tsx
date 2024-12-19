@@ -18,15 +18,6 @@ export default function Home() {
             Contact
           </a>
         </div>
-        {/* Membership Options */}
-        <div className="mt-8 flex justify-center space-x-8">
-          <a href="https://buy.stripe.com/00g03D6OFaHG3F6eUU" target="_blank" className="coin-button">
-            General Lithium Membership
-          </a>
-          <a href="https://buy.stripe.com/00geYxflbg20ejKfYZ" target="_blank" className="coin-button">
-            General Lithium Associate
-          </a>
-        </div>
       </header>
 
       {/* About Section */}
@@ -36,28 +27,67 @@ export default function Home() {
           <p className="mt-4 text-lg max-w-prose mx-auto glow-effect">
             General Lithium HQ is a 501c3 nonprofit makerspace that empowers teams to build cutting-edge technologies, including edge AI, hardware solutions, and battery management systems. We host classes, run workshops, and throw events for the San Francisco tech community.
           </p>
+        </div>
+      </section>
 
-          {/* Image Gallery */}
+      {/* Membership Section */}
+      <section className="py-16 px-8 bg-gradient-to-r from-blue-900 via-black to-blue-900 text-white">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl glow-effect">Join GLHQ Today</h2>
+          <p className="mt-4 text-lg glow-effect">
+            Choose from two membership options to access cutting-edge tools and a vibrant community.
+          </p>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-black p-4 rounded-lg">
+              <h3 className="text-2xl font-bold glow-effect">GLHQ Associates</h3>
+              <ul className="mt-4 space-y-2 text-left text-lg glow-effect">
+                <li>Access to the space and tools</li>
+                <li>A ticket to all events</li>
+                <li>Floating workspace at a desk</li>
+              </ul>
+              <div className="mt-4">
+                <a
+                  href="https://buy.stripe.com/00geYxflbg20ejKfYZ"
+                  target="_blank"
+                  className="coin-button"
+                >
+                  Become an Associate
+                </a>
+              </div>
+            </div>
+            <div className="bg-black p-4 rounded-lg">
+              <h3 className="text-2xl font-bold glow-effect">GLHQ Members</h3>
+              <ul className="mt-4 space-y-2 text-left text-lg glow-effect">
+                <li>Associate privileges</li>
+                <li>Dedicated workspace</li>
+                <li>Event hosting privileges</li>
+              </ul>
+              <p className="mt-4 text-lg glow-effect">
+                Member Access: Mon-Fri 9am-9pm<br />
+                Public Access: Thurs-Fri 9am-6pm
+              </p>
+              <div className="mt-4">
+                <a
+                  href="https://buy.stripe.com/00g03D6OFaHG3F6eUU"
+                  target="_blank"
+                  className="coin-button"
+                >
+                  Become a Member
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Gallery */}
+      <section className="py-16 px-8 bg-black text-white">
+        <div className="container mx-auto text-center">
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <img src="/images/GL-ai-takeover-3299.jpg" alt="Event 1" className="rounded-lg object-cover w-full h-64" />
             <img src="/images/GLHQ-laser-cutter.jpg" alt="Event 2" className="rounded-lg object-cover w-full h-64" />
             <img src="/images/GL-ai-takeover-3355.jpg" alt="Equipment 1" className="rounded-lg object-cover w-full h-64" />
             <img src="/images/GLHQ-SFNode-meetup.jpg" alt="Equipment 2" className="rounded-lg object-cover w-full h-64" />
-          </div>
-
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-r from-black via-blue-900 to-black p-4 rounded-lg">
-              <h3 className="text-xl glow-effect">Edge AI</h3>
-              <p className="mt-2 glow-effect">Pioneering AI projects at the edge, where speed and efficiency matter.</p>
-            </div>
-            <div className="bg-gradient-to-r from-black via-blue-900 to-black p-4 rounded-lg">
-              <h3 className="text-xl glow-effect">Robotics</h3>
-              <p className="mt-2 glow-effect">Enabling next-generation robotics for forward deployed applications.</p>
-            </div>
-            <div className="bg-gradient-to-r from-black via-blue-900 to-black p-4 rounded-lg">
-              <h3 className="text-xl glow-effect">Battery Systems</h3>
-              <p className="mt-2 glow-effect">Designing high-efficiency battery systems for advanced applications.</p>
-            </div>
           </div>
         </div>
       </section>
