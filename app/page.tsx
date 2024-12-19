@@ -18,6 +18,15 @@ export default function Home() {
             Contact
           </a>
         </div>
+        {/* Membership Options */}
+        <div className="mt-8 flex justify-center space-x-8">
+          <a href="https://buy.stripe.com/00g03D6OFaHG3F6eUU" target="_blank" className="coin-button">
+            General Lithium Membership
+          </a>
+          <a href="https://buy.stripe.com/00geYxflbg20ejKfYZ" target="_blank" className="coin-button">
+            General Lithium Associate
+          </a>
+        </div>
       </header>
 
       {/* About Section */}
