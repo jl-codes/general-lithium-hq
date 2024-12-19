@@ -71,11 +71,11 @@ export default function Home() {
                   Become a Member
                 </a>
               </div>
-              <p className="mt-4 text-lg glow-effect">
+            </div>
+            <p className="mt-4 text-xl glow-effect">
                 Member Access: Mon-Fri 9am-9pm<br />
                 Public Access: Thurs-Fri 9am-6pm
               </p>
-            </div>   
           </div>
         </div>
       </section>
