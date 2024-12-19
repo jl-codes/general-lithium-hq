@@ -8,7 +8,7 @@ export default function Home() {
           A space for AI, robotics, and hardware innovation in downtown San Francisco
         </p>
         <div className="mt-8 flex justify-center space-x-8">
-          <a href="https://general-lithium.com/space" target="_blank" className="coin-button">
+          <a href="https://general-lithium.com/glhq" target="_blank" className="coin-button">
             Join Us
           </a>
           <a href="https://lu.ma/general-lithium" target="_blank" className="coin-button">
