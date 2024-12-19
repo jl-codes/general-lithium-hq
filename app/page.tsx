@@ -62,10 +62,6 @@ export default function Home() {
                 <li>Dedicated workspace</li>
                 <li>Event hosting privileges</li>
               </ul>
-              <p className="mt-4 text-lg glow-effect">
-                Member Access: Mon-Fri 9am-9pm<br />
-                Public Access: Thurs-Fri 9am-6pm
-              </p>
               <div className="mt-4">
                 <a
                   href="https://buy.stripe.com/00g03D6OFaHG3F6eUU"
@@ -76,6 +72,10 @@ export default function Home() {
                 </a>
               </div>
             </div>
+            <p className="mt-4 text-lg glow-effect">
+                Member Access: Mon-Fri 9am-9pm<br />
+                Public Access: Thurs-Fri 9am-6pm
+              </p>
           </div>
         </div>
       </section>
