@@ -25,7 +25,7 @@ export default function Home() {
         <div className="container mx-auto text-center">
           <h2 className="text-4xl glow-effect">About Us</h2>
           <p className="mt-4 text-lg max-w-prose mx-auto glow-effect">
-            General Lithium HQ (GLHQ) is a 501c3 nonprofit makerspace that empowers teams to build cutting-edge technologies, including edge AI, hardware solutions, and battery management systems. We host classes, run workshops, and throw events for the San Francisco tech community. Visit us at 1338 Mission St, San Francisco, CA -- call (510) 831-2227‬ for access.
+            General Lithium HQ (GLHQ) is a 501c3 nonprofit makerspace that empowers teams to build cutting-edge technologies, including edge AI, hardware solutions, and battery management systems. We host classes, run workshops, and throw events for the San Francisco tech community. Visit us at 1338 Mission St, San Francisco, CA -- call (510)831-2227 for access.
           </p>
         </div>
       </section>
