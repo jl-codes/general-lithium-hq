@@ -12,10 +12,10 @@ export default function Home() {
             Join Us
           </a>
           <a href="https://lu.ma/general-lithium" target="_blank" className="coin-button">
-            Event Page
+            Events
           </a>
-          <a href="#contact-section" className="coin-button">
-            Contact
+          <a href="https://buy.stripe.com/cN2eYx0qh6rq2B2eV3" target="_blank" className="coin-button">
+            Donate
           </a>
         </div>
       </header>
