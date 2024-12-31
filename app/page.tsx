@@ -24,7 +24,7 @@ export default function Home() {
       <section className="py-16 px-8 bg-black text-white">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl glow-effect">About Us</h2>
-          <p className="mt-4 text-lg max-w-prose mx-auto glow-effect">
+          <p className="mt-4 text-lg max-w-4xl mx-auto glow-effect">
             At General Lithium HQ (GLHQ), we’re not just building technologies—we’re building a brighter future. As a 501(c)(3) nonprofit (EIN 99-4582316), our mission is to empower individuals and teams to create cutting-edge innovations like edge AI, hardware solutions, and advanced battery management systems.
             <br /><br />
             But we don’t stop there. Through hands-on classes, engaging workshops, and community events, we ignite curiosity and provide access to tools and knowledge that make technology approachable for everyone.
