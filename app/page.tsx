@@ -25,7 +25,17 @@ export default function Home() {
         <div className="container mx-auto text-center">
           <h2 className="text-4xl glow-effect">About Us</h2>
           <p className="mt-4 text-lg max-w-prose mx-auto glow-effect">
-            General Lithium HQ (GLHQ) is a 501c3 nonprofit (EIN 99-4582316) that empowers teams to build cutting-edge technologies, including edge AI, hardware solutions, and battery management systems. We host classes, run workshops, and throw events for the San Francisco tech community. Visit us at 1338 Mission St, San Francisco, CA -- call (510)831-2227 for access.
+            At General Lithium HQ (GLHQ), we’re not just building technologies—we’re building a brighter future. As a 501(c)(3) nonprofit (EIN 99-4582316), our mission is to empower individuals and teams to create cutting-edge innovations like edge AI, hardware solutions, and advanced battery management systems.
+            <br /><br />
+            But we don’t stop there. Through hands-on classes, engaging workshops, and community events, we ignite curiosity and provide access to tools and knowledge that make technology approachable for everyone.
+            <br /><br />
+            Our flagship programs, like the “Build-A-Robot Workshop,” are designed to inspire and educate the next generation of creators, with a special focus on urban youth and young hobbyists. By fostering an inclusive and supportive environment, we ensure that innovation wins.
+            <br /><br />
+            Your support fuels our mission. Every donation helps us expand our reach, improve our resources, and empower more members of our community to dream big and achieve more.
+            <br /><br />
+            Join us in shaping the future of technology and education. Visit us at 1338 Mission St, San Francisco, CA, or call (510) 831-2227 to learn how you can make a difference.
+            <br /><br />
+            💡 Donate today and help us transform lives through innovation!
           </p>
         </div>
       </section>
