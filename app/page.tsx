@@ -99,13 +99,18 @@ export default function Home() {
             <img src="/images/GL-ai-takeover-3355.jpg" alt="Equipment 1" className="rounded-lg object-cover w-full h-64" />
             <img src="/images/GLHQ-SFNode-meetup.jpg" alt="Equipment 2" className="rounded-lg object-cover w-full h-64" />
           </div>
-          <a
-                href="https://laser.general-lithium-hq.com/"
-                rel="noopener noreferrer"
-                className="underline hover:text-secondary-highlight"
-              >
-                Want to use our 130W Monport Laser Cutter? Submit your files now!
-          </a>
+          <div>
+            <p className="mt-4 text-xl glow-effect">
+              GLHQ is for the community
+            </p>
+            <a
+                  href="https://laser.general-lithium-hq.com/"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-secondary-highlight"
+                >
+                  Want to use our 130W Monport Laser Cutter? Submit your files now!
+            </a>
+          </div> 
         </div>
       </section>
 
