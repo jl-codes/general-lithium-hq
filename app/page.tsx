@@ -1,18 +1,26 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
 
-const LAUNCH_DATE = new Date("2025-06-15T00:00:00-07:00").getTime(); // adjust as needed
-const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS!;
-const CROSSMINT_CLIENT_ID = process.env.NEXT_PUBLIC_CROSSMINT_CLIENT_ID!;
+// -------------------------------------------------
+// Configurable constants (set via Vercel env vars)
+// -------------------------------------------------
+const LAUNCH_DATE = new Date("2025-06-15T00:00:00-07:00").getTime();
+const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as string;
+const CROSSMINT_CLIENT_ID = process.env.NEXT_PUBLIC_CROSSMINT_CLIENT_ID as string;
 
 export default function Home() {
+  // ------------------------------
+  // Countdown timer
+  // ------------------------------
   const [timeLeft, setTimeLeft] = useState<string | null>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      const now = new Date().getTime();
+      const now = Date.now();
       const distance = LAUNCH_DATE - now;
 
       if (distance < 0) {
@@ -30,6 +38,9 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
+  // ------------------------------
+  // Render
+  // ------------------------------
   return (
     <>
       <Head>
@@ -39,10 +50,12 @@ export default function Home() {
           content="Token‑gated access to San Francisco’s premier AI & hardware makerspace—powered by General Lithium HQ"
         />
       </Head>
+
       <div className="min-h-screen bg-black text-white font-sans">
         {/* Top Navigation */}
         <nav className="flex justify-between items-center p-4 backdrop-blur-md bg-opacity-30 bg-black/50 sticky top-0 z-50">
           <h1 className="text-2xl font-bold">GLHQ</h1>
+          {/* RainbowKit wallet connect */}
           <ConnectButton chainStatus="icon" showBalance={false} />
         </nav>
 
@@ -59,16 +72,20 @@ export default function Home() {
           ) : (
             <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-6">
               {/* Crossmint Button handles credit‑card + crypto */}
-              <CrossmintPayButton
-                clientId={CROSSMINT_CLIENT_ID}
-                environment="production"
-                mintConfig={{
-                  type: "erc-721",
-                  totalPrice: "0.15",
-                  _contractAddress: CONTRACT_ADDRESS,
-                }}
-                className="coin-button !py-4 !px-8 !text-xl"
-              />
+              {CROSSMINT_CLIENT_ID && CONTRACT_ADDRESS ? (
+                <CrossmintPayButton
+                  clientId={CROSSMINT_CLIENT_ID}
+                  environment="production"
+                  mintConfig={{
+                    type: "erc-721",
+                    totalPrice: "0.15",
+                    _contractAddress: CONTRACT_ADDRESS,
+                  }}
+                  className="coin-button !py-4 !px-8 !text-xl"
+                />
+              ) : (
+                <span className="text-red-500">env vars not set</span>
+              )}
               {/* Backup Stripe (fiat) */}
               <a
                 href="https://buy.stripe.com/YOUR_BUILDER_PASS_LINK"
