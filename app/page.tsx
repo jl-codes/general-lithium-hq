@@ -3,14 +3,14 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
+import { CrossmintProvider, CrossmintEmbeddedCheckout } from "@crossmint/client-sdk-react-ui";
 
 // -------------------------------------------------
 // Configurable constants (set via Vercel env vars)
 // -------------------------------------------------
 const LAUNCH_DATE = new Date("2025-06-15T00:00:00-07:00").getTime();
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as string;
-const CROSSMINT_CLIENT_ID = process.env.NEXT_PUBLIC_CROSSMINT_CLIENT_ID as string;
+const CROSSMINT_CLIENT_API_KEY = process.env.NEXT_PUBLIC_CROSSMINT_CLIENT_API_KEY as string;
 
 export default function Home() {
   // ------------------------------
@@ -72,17 +72,32 @@ export default function Home() {
           ) : (
             <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-6">
               {/* Crossmint Button handles credit‑card + crypto */}
-              {CROSSMINT_CLIENT_ID && CONTRACT_ADDRESS ? (
-                <CrossmintPayButton
-                  clientId={CROSSMINT_CLIENT_ID}
-                  environment="production"
-                  mintConfig={{
-                    type: "erc-721",
-                    totalPrice: "0.15",
-                    _contractAddress: CONTRACT_ADDRESS,
-                  }}
-                  className="coin-button !py-4 !px-8 !text-xl"
-                />
+              {CROSSMINT_CLIENT_API_KEY && CONTRACT_ADDRESS ? (
+                <CrossmintProvider apiKey={CROSSMINT_CLIENT_API_KEY}>
+                  <CrossmintEmbeddedCheckout
+                    lineItems={{
+                      collectionLocator: `crossmint:${CONTRACT_ADDRESS}`,
+                      callData: {
+                        totalPrice: '0.05',
+                        quantity: 1,
+                      },
+                    }}
+                    payment={{
+                      crypto: {
+                        enabled: true,
+                        defaultChain: 'ethereum',
+                      },
+                      fiat: {
+                        enabled: true,
+                        allowedMethods: {
+                          card: true,
+                          applePay: true,
+                          googlePay: true,
+                        },
+                      },
+                    }}
+                  />
+                </CrossmintProvider>
               ) : (
                 <span className="text-red-500">env vars not set</span>
               )}
