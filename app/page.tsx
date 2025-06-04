@@ -216,6 +216,56 @@ export default function Home() {
               </div>
             </section>
 
+            {/* ­­­­­­­­­­­­­­­­­­­­­­­­­­­­  SUPPORT GLHQ  — monthly donors  */}
+            <section className="py-20 px-8 bg-black text-center" id="donate">
+              <h3 className="text-4xl font-bold glow-effect mb-4 text-white">
+                Fuel the Mission → Become a Monthly Supporter
+              </h3>
+              <p className="max-w-3xl mx-auto text-lg text-gray-300 mb-12 leading-relaxed">
+                Your recurring gift keeps our nonprofit makerspace open to students, under-represented founders
+                and the broader SF hardware scene. Associates and Members unlock <em>exclusive videos, behind-the-scenes
+                project drops, and invite-only socials</em> across our partner spaces city-wide.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                {/* Associate — $100/mo */}
+                <div className="bg-blue-900/50 backdrop-blur-lg p-8 rounded-2xl shadow-lg">
+                  <h4 className="text-2xl font-bold mb-3 text-white">GLHQ Associate</h4>
+                  <ul className="text-left text-gray-200 space-y-2 mb-6">
+                    <li>✅ Early access to workshop sign-ups</li>
+                    <li>✅ Private Discord channel + AMAs</li>
+                    <li>✅ One guest-pass per month</li>
+                  </ul>
+                  <a
+                    href="https://buy.stripe.com/00geYxflbg20ejKfYZ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="coin-button w-full block"
+                  >
+                    Donate $100 / month
+                  </a>
+                </div>
+
+                {/* Member — $200/mo */}
+                <div className="bg-purple-900/60 backdrop-blur-lg p-8 rounded-2xl shadow-lg border-2 border-purple-400">
+                  <h4 className="text-2xl font-bold mb-3 text-white">GLHQ Member</h4>
+                  <ul className="text-left text-gray-200 space-y-2 mb-6">
+                    <li>✨ All Associate perks</li>
+                    <li>✨ VIP seating at quarterly Demo Nights</li>
+                    <li>✨ Private lab tours & beta-tester invites</li>
+                  </ul>
+                  <a
+                    href="https://buy.stripe.com/00g03D6OFaHG3F6eUU"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="coin-button w-full block"
+                  >
+                    Donate $200 / month
+                  </a>
+                </div>
+              </div>
+            </section>
+
             <footer className="text-center py-8 bg-black/90 text-gray-400 text-sm">
               {new Date().getFullYear()} General Lithium HQ — Frontier Forge Pass
             </footer>
